@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Marten" Version="6.0.0-alpha.8" />
+        <PackageReference Include="WolverineFx" Version="0.9.12" />
+        <PackageReference Include="WolverineFx.FluentValidation" Version="0.9.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\LMS.Borrowing\LMS.Borrowing.csproj" />
+    </ItemGroup>
+</Project>

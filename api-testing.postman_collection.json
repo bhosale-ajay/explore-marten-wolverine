@@ -1,0 +1,689 @@
+{
+	"info": {
+		"_postman_id": "8fb9de33-8d72-41ab-bcf0-d6eaa0c59dcf",
+		"name": "LMS API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25109284"
+	},
+	"item": [
+		{
+			"name": "mason.lms.com",
+			"item": [
+				{
+					"name": "API root",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://mason.lms.com:8082",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8082"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Member Joined - c62ec096",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/join/c62ec096-c7f7-45a4-a840-4a2e479a749e",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"join",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hold - c62ec096",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/holds",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"holds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 01 - 78cd719c",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"1\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"78cd719c-3e23-47aa-97e7-77d9b479b842\",\n    \"Format\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/placeHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 02 - 5713cf70",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"2\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"5713cf70-64d2-4229-94ec-c042ce8fb139\",\n    \"Format\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/placeHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 03 - 9368e8b5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"3\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"9368e8b5-acc9-4451-8857-76cf758b220c\",\n    \"Format\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/placeHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Hold - 9368e8b5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"4\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"9368e8b5-acc9-4451-8857-76cf758b220c\",\n    \"Format\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/cancelHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"cancelHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mark Ready - 5713cf70",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"5\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"5713cf70-64d2-4229-94ec-c042ce8fb139\",\n    \"Format\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/markReady",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"markReady"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold Invalid Member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"0\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"1f433d2c-796d-4042-b89e-ad27c68dba79\",\n    \"Format\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/placeHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold Bad Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"0\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"00000000-0000-0000-0000-000000000000\",\n    \"Format\" : 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://mason.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/placeHold",
+							"protocol": "http",
+							"host": [
+								"mason",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cin.lms.com",
+			"item": [
+				{
+					"name": "API root",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://cin.lms.com:8082",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8082"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Member Joined  - 4e6f7761",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/join/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"join",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Hold - 4e6f7761",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/holds",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"holds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 01 - 78cd719c",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"1\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"78cd719c-3e23-47aa-97e7-77d9b479b842\",\n    \"Format\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/placeHold",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 02 - 5713cf70",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"2\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"5713cf70-64d2-4229-94ec-c042ce8fb139\",\n    \"Format\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/placeHold",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold 03 - 9368e8b5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"3\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"9368e8b5-acc9-4451-8857-76cf758b220c\",\n    \"Format\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/placeHold",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Hold - 9368e8b5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"4\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"9368e8b5-acc9-4451-8857-76cf758b220c\",\n    \"Format\" : 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/4e6f7761-d5d0-4ff1-bbde-5ca0be77610e/cancelHold",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"4e6f7761-d5d0-4ff1-bbde-5ca0be77610e",
+								"cancelHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Hold Invalid Not Yet Joined - c62ec096",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "\"0\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"BookId\" : \"1f433d2c-796d-4042-b89e-ad27c68dba79\",\n    \"Format\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/placeHold",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+								"placeHold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Temp :: Member Joined - c62ec096",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://cin.lms.com:8081/api/holdregister/join/c62ec096-c7f7-45a4-a840-4a2e479a749e",
+							"protocol": "http",
+							"host": [
+								"cin",
+								"lms",
+								"com"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"holdregister",
+								"join",
+								"c62ec096-c7f7-45a4-a840-4a2e479a749e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book Report - Across Tenant",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://mason.lms.com:8081/api/holdregister/c62ec096-c7f7-45a4-a840-4a2e479a749e/holds",
+					"protocol": "http",
+					"host": [
+						"mason",
+						"lms",
+						"com"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"holdregister",
+						"c62ec096-c7f7-45a4-a840-4a2e479a749e",
+						"holds"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

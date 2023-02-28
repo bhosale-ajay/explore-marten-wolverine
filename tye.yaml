@@ -1,0 +1,51 @@
+name: LMS
+
+services:
+  - name: borrowing-context
+    project: src/LMS.Borrowing.API/LMS.Borrowing.API.csproj
+    env:
+      - name : ASPNETCORE_ENVIRONMENT
+        value: "Development"
+    bindings:
+      - name: mason
+        port: 8081
+        protocol: http
+        host: mason.lms.com
+      - name: cin
+        port: 8082
+        protocol: http
+        host: cin.lms.com
+
+  - name: postgres
+    image: clkao/postgres-plv8
+    bindings:
+      - port: 5432
+        containerPort: 5432
+    env:
+      - name: POSTGRES_PASSWORD
+        value: postgres
+      - name: POSTGRES_DB
+        value: LMS_DB
+      - name: POSTGRES_USER
+        value: postgres
+      - name: POSTGRES_HOST_AUTH_METHOD
+        value: trust
+    volumes:
+      - source: ./data/postgres
+        target: /var/lib/postgresql/data
+
+  - name: pgAdmin
+    image: dpage/pgadmin4
+    bindings:
+      - port: 5050
+        protocol: http
+    env:
+      - name: PGADMIN_DEFAULT_EMAIL
+        value: admin@binarydefense.com
+      - name: PGADMIN_DEFAULT_PASSWORD
+        value: Password
+    volumes:
+      - source: ./dockerConfigs/pgadmin/servers.json
+        target: /pgadmin4/servers.json
+      - source: ./dockerConfigs/pgadmin/pgpass
+        target: /pgpass

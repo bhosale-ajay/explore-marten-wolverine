@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>LMS.Borrowing.API</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="Marten" Version="6.0.0-alpha.8" />
+        <PackageReference Include="Marten.AspNetCore" Version="6.0.0-alpha.8" />
+        <PackageReference Include="WolverineFx" Version="0.9.12" />
+        <PackageReference Include="WolverineFx.FluentValidation" Version="0.9.12" />
+        <PackageReference Include="WolverineFx.Marten" Version="0.9.12" />
+        <PackageReference Include="WolverineFx.RabbitMQ" Version="0.9.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\LMS.Borrowing\LMS.Borrowing.csproj" />
+        <ProjectReference Include="..\LMS.Marten.Generated\LMS.Marten.Generated.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Internal\**" />
+    </ItemGroup>
+</Project>
